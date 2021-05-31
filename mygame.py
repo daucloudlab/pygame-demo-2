@@ -22,6 +22,21 @@ while run:
             run = False
 
 
+    
+    keys = pygame.key.get_pressed()
+    if keys[pygame.K_LEFT]:
+        x -= speed
+    if keys[pygame.K_RIGHT]:
+        x += speed
+    if keys[pygame.K_UP]:
+        y -= speed
+    if keys[pygame.K_DOWN]:
+        y += speed
+    
+    win.fill((0,0,0))
+    pygame.draw.rect(win, (0,0,255), (x, y, width, height))
+    
+    pygame.display.update()
 
 
 pygame.quit()
